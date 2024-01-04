@@ -20,11 +20,11 @@ class _GameScreen extends State<GameScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ButtonElement(element: 'Rock'),
-              SizedBox(width: 10),
-              ButtonElement(element: 'Paper'),
-              SizedBox(width: 10),
-              ButtonElement(element: 'Scissors'),
+              ButtonElement(element: 'rock'),
+              SizedBox(width: 15),
+              ButtonElement(element: 'paper'),
+              SizedBox(width: 15),
+              ButtonElement(element: 'scissors'),
             ],
           ),
           SizedBox(height: 100),

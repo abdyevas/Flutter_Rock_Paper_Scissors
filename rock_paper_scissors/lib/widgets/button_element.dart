@@ -7,9 +7,21 @@ class ButtonElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
+    return FilledButton.tonal(
       onPressed: () {},
-      child: Text(element),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(5),
+            child: Image.asset(
+              'assets/images/$element.png',
+              width: 50,
+              height: 100,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
