@@ -7,13 +7,21 @@ var kColorScheme = ColorScheme.fromSeed(
 
 var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: const Color.fromARGB(255, 12, 129, 202),
+  seedColor: const Color.fromARGB(255, 62, 210, 145),
 );
 
 void main() {
   runApp(
-    const MaterialApp(
-      home: GameScreen(), 
+    MaterialApp(
+      theme: ThemeData().copyWith(
+        useMaterial3: true,
+        colorScheme: kColorScheme,
+      ),
+      darkTheme: ThemeData.dark().copyWith(
+        useMaterial3: true,
+        colorScheme: kDarkColorScheme,
+      ),
+      home: const GameScreen(), 
     ),
   );
 }
