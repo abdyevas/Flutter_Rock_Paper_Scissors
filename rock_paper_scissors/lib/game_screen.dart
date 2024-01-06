@@ -16,19 +16,21 @@ class _GameScreen extends State<GameScreen> {
     return const Scaffold(
       body: Column(
         children: [
+          SizedBox(height: 50),
+          Text('Rock - Paper - Scissors'),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: 200),
+                SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    ButtonElement(element: 'rock'),
+                    ButtonElement(element: null),
                     SizedBox(width: 15),
-                    ButtonElement(element: 'paper'),
+                    ButtonElement(element: null),
                     SizedBox(width: 15),
-                    ButtonElement(element: 'scissors'),
+                    ButtonElement(element: null),
                   ],
                 ),
               ],
@@ -36,7 +38,7 @@ class _GameScreen extends State<GameScreen> {
           ),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
