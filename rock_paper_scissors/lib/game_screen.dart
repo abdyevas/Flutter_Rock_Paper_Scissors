@@ -15,19 +15,43 @@ class _GameScreen extends State<GameScreen> {
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ButtonElement(element: 'rock'),
-              SizedBox(width: 15),
-              ButtonElement(element: 'paper'),
-              SizedBox(width: 15),
-              ButtonElement(element: 'scissors'),
-            ],
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(height: 200),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ButtonElement(element: 'rock'),
+                    SizedBox(width: 15),
+                    ButtonElement(element: 'paper'),
+                    SizedBox(width: 15),
+                    ButtonElement(element: 'scissors'),
+                  ],
+                ),
+              ],
+            ),
           ),
-          SizedBox(height: 100),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ButtonElement(element: 'rock'),
+                    SizedBox(width: 15),
+                    ButtonElement(element: 'paper'),
+                    SizedBox(width: 15),
+                    ButtonElement(element: 'scissors'),
+                  ],
+                ),
+                SizedBox(height: 100),
+              ],
+            ),
+          ),
         ],
       ),
     );

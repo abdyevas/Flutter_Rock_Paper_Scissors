@@ -21,14 +21,17 @@ class ButtonElement extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(5),
-            child: Image.asset(
-              element != null
-                  ? 'assets/images/$element.png'
-                  : '',
-              width: 50,
-              height: 80,
-              fit: BoxFit.cover,
-            ),
+            child: element != null
+                ? Image.asset(
+                    'assets/images/$element.png',
+                    width: 50,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  )
+                : const SizedBox(
+                    width: 50,
+                    height: 80,
+                  ),
           ),
         ],
       ),
