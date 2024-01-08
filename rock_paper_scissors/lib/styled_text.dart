@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:rock_paper_scissors/theme.dart';
 
 class StyledText extends StatelessWidget {
   const StyledText({
@@ -20,7 +21,7 @@ class StyledText extends StatelessWidget {
               foreground: (Paint()
                 ..style = PaintingStyle.stroke
                 ..strokeWidth = 12.0)
-                ..color = const Color.fromARGB(255, 151, 189, 68),
+                ..color = kColorScheme.primary,
               fontSize: 28.0,
               fontWeight: FontWeight.bold,
             ),
