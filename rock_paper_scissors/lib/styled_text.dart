@@ -15,22 +15,24 @@ class StyledText extends StatelessWidget {
       children: [
         Text(
           text,
-          style: GoogleFonts.montserrat(
+          style: GoogleFonts.novaSquare(
             textStyle: TextStyle(
               foreground: (Paint()
                 ..style = PaintingStyle.stroke
-                ..strokeWidth = 5.0),
-              fontSize: 10.0,
+                ..strokeWidth = 12.0)
+                ..color = const Color.fromARGB(255, 151, 189, 68),
+              fontSize: 28.0,
               fontWeight: FontWeight.bold,
             ),
           ),
         ),
         Text(
           text,
-          style: GoogleFonts.montserrat(
+          style: GoogleFonts.novaSquare(
             textStyle: const TextStyle(
-              fontSize: 15.0,
+              fontSize: 28.0,
               fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
         ),

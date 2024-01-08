@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rock_paper_scissors/styled_text.dart';
 import 'package:rock_paper_scissors/widgets/button_element.dart';
 
 class GameScreen extends StatefulWidget {
@@ -16,13 +17,13 @@ class _GameScreen extends State<GameScreen> {
     return const Scaffold(
       body: Column(
         children: [
-          SizedBox(height: 50),
-          Text('Rock - Paper - Scissors'),
+          SizedBox(height: 70),
+          StyledText(text: 'Rock - Paper - Scissors'),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                SizedBox(height: 50),
+                SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
