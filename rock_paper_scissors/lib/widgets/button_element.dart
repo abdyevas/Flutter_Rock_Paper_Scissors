@@ -15,7 +15,7 @@ class ButtonElement extends StatelessWidget {
           ),
         ),
       ),
-      onPressed: () {},
+      onPressed: element != null ? () {} : () {},
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
