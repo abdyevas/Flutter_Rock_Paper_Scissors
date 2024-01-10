@@ -14,46 +14,54 @@ class GameScreen extends StatefulWidget {
 class _GameScreen extends State<GameScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Column(
+    return Scaffold(
+      body: Stack(
         children: [
-          SizedBox(height: 70),
-          StyledText(text: 'Rock - Paper - Scissors'),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    ButtonElement(element: null),
-                    SizedBox(width: 15),
-                    ButtonElement(element: null),
-                    SizedBox(width: 15),
-                    ButtonElement(element: null),
-                  ],
-                ),
-              ],
-            ),
+          Container(
+            decoration:
+                BoxDecoration(color: Theme.of(context).colorScheme.background),
           ),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+          const Column(
+            children: [
+              SizedBox(height: 70),
+              StyledText(text: 'Rock - Paper - Scissors'),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    ButtonElement(element: 'rock'),
-                    SizedBox(width: 15),
-                    ButtonElement(element: 'paper'),
-                    SizedBox(width: 15),
-                    ButtonElement(element: 'scissors'),
+                    SizedBox(height: 30),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ButtonElement(element: null),
+                        SizedBox(width: 15),
+                        ButtonElement(element: null),
+                        SizedBox(width: 15),
+                        ButtonElement(element: null),
+                      ],
+                    ),
                   ],
                 ),
-                SizedBox(height: 100),
-              ],
-            ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ButtonElement(element: 'rock'),
+                        SizedBox(width: 15),
+                        ButtonElement(element: 'paper'),
+                        SizedBox(width: 15),
+                        ButtonElement(element: 'scissors'),
+                      ],
+                    ),
+                    SizedBox(height: 100),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
