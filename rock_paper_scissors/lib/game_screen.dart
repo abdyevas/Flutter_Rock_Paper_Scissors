@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rock_paper_scissors/styled_text.dart';
+import 'package:rock_paper_scissors/styling/styled_text.dart';
 import 'package:rock_paper_scissors/widgets/button_element.dart';
 
 class GameScreen extends StatefulWidget {
