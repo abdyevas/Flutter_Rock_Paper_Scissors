@@ -14,6 +14,9 @@ class ButtonElement extends StatelessWidget {
             borderRadius: BorderRadius.circular(12.0),
           ),
         ),
+        side: MaterialStateProperty.all<BorderSide>(
+          const BorderSide(width: 3.0),
+        ),
       ),
       onPressed: element != null ? () {} : () {},
       child: Row(
