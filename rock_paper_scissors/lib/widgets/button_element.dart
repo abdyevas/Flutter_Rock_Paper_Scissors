@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rock_paper_scissors/styling/styled_button.dart';
 
 class ButtonElement extends StatefulWidget {
   const ButtonElement({super.key, required this.element});
@@ -14,17 +15,8 @@ class ButtonElement extends StatefulWidget {
 class _ButtonElementState extends State<ButtonElement> {
   @override
   Widget build(BuildContext context) {
-    return FilledButton.tonal(
-      style: ButtonStyle(
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-        ),
-        side: MaterialStateProperty.all<BorderSide>(
-          const BorderSide(width: 3.0),
-        ),
-      ),
+    return ElevatedButton( 
+      style: MyStyledButton.filledTonal,
       onPressed: widget.element != null ? () {} : () {},
       child: Row(
         mainAxisSize: MainAxisSize.min,
