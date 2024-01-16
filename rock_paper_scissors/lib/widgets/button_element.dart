@@ -14,6 +14,9 @@ class ButtonElement extends StatefulWidget {
 }
 
 class _ButtonElementState extends State<ButtonElement> {
+  
+  int randomChoice = Random().nextInt(3) + 1;
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -28,12 +31,8 @@ class _ButtonElementState extends State<ButtonElement> {
         } else if (widget.element == 'scissors') {
           playerChoice = 3;
         }
-        print(playerChoice);
       } 
-      : () {
-        int opponentChoice = Random().nextInt(3) + 1;
-        print(opponentChoice);
-      },
+      : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
