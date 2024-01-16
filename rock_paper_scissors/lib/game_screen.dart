@@ -57,7 +57,7 @@ class _GameScreen extends State<GameScreen> {
                         ButtonElement(element: 'scissors'),
                       ],
                     ),
-                    SizedBox(height: 100),
+                    SizedBox(height: 80),
                   ],
                 ),
               ),
