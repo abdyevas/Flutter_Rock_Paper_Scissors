@@ -21,16 +21,15 @@ class _GameScreen extends State<GameScreen> {
             decoration:
                 BoxDecoration(color: Theme.of(context).colorScheme.background),
           ),
-          const Column(
+          Column(
             children: [
-              SizedBox(height: 70),
-              StyledText(text: 'Rock - Paper - Scissors'),
+              const SizedBox(height: 100),
+              const StyledText(text: 'Rock - Paper - Scissors'),
               Expanded(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(height: 30),
-                    Row(
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ButtonElement(element: null),
@@ -40,14 +39,13 @@ class _GameScreen extends State<GameScreen> {
                         ButtonElement(element: null),
                       ],
                     ),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Row(
+                    Image.asset(
+                      'assets/images/paper_rock.png',
+                      width: 400,
+                      height: 400,
+                      fit: BoxFit.cover,
+                    ),
+                    const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ButtonElement(element: 'rock'),

@@ -15,14 +15,13 @@ class ButtonElement extends StatefulWidget {
 
 class _ButtonElementState extends State<ButtonElement> {
   
-  int randomChoice = Random().nextInt(3) + 1;
-
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: MyStyledButton.filledTonal(),
       onPressed: widget.element != null 
       ? () {
+        int randomChoice = Random().nextInt(3) + 1;
         int playerChoice = 0;
         if (widget.element == 'rock') {
           playerChoice = 1;
