@@ -15,9 +15,14 @@ class MyStyledButton {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
       ),
-      side: const BorderSide(width: 3.0),
-      padding: EdgeInsets.symmetric(horizontal: 20),
-      backgroundColor: Colors.lightBlueAccent,
+      side: const BorderSide(
+        color: Colors.green,
+        width: 5.0,
+      ),
+      padding: const EdgeInsets.symmetric(
+        horizontal: 28,
+        vertical: 4,
+      ),
     );
   }
 

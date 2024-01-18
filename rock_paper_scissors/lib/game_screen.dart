@@ -12,7 +12,6 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreen extends State<GameScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,36 +29,37 @@ class _GameScreen extends State<GameScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ButtonElement(element: null),
-                        SizedBox(width: 15),
-                        ButtonElement(element: null),
-                        SizedBox(width: 15),
-                        ButtonElement(element: null),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 30),
-                      child: Image.asset(
-                        'assets/images/scissors_paper.png',
-                        width: 350,
-                        height: 350,
-                        fit: BoxFit.cover,
+                    const Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ButtonElement(element: null),
+                          SizedBox(width: 15),
+                          ButtonElement(element: null),
+                          SizedBox(width: 15),
+                          ButtonElement(element: null),
+                        ],
                       ),
                     ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        ButtonElement(element: 'rock'),
-                        SizedBox(width: 15),
-                        ButtonElement(element: 'paper'),
-                        SizedBox(width: 15),
-                        ButtonElement(element: 'scissors'),
-                      ],
+                    Image.asset(
+                      'assets/images/scissors_paper.png',
+                      width: 300,
+                      height: 300,
+                      fit: BoxFit.cover,
                     ),
-                    const SizedBox(height: 80),
+                    const Expanded(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ButtonElement(element: 'rock'),
+                          SizedBox(width: 15),
+                          ButtonElement(element: 'paper'),
+                          SizedBox(width: 15),
+                          ButtonElement(element: 'scissors'),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(height: 40),
                   ],
                 ),
               ),

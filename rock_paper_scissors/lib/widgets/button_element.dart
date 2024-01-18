@@ -15,23 +15,29 @@ class ButtonElement extends StatefulWidget {
 
 class _ButtonElementState extends State<ButtonElement> {
   
+  bool isSelected = false;
+          
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: MyStyledButton.filledTonal(),
-      onPressed: widget.element != null 
-      ? () {
-        int randomChoice = Random().nextInt(3) + 1;
-        int playerChoice = 0;
-        if (widget.element == 'rock') {
-          playerChoice = 1;
-        } else if (widget.element == 'paper') {
-          playerChoice = 2;
-        } else if (widget.element == 'scissors') {
-          playerChoice = 3;
-        }
-      } 
-      : null,
+      style: isSelected ? MyStyledButton.selected() : MyStyledButton.normal(),
+      onPressed: widget.element != null
+          ? () {
+              int randomChoice = Random().nextInt(3) + 1;
+              int playerChoice = 0;
+              if (widget.element == 'rock') {
+                playerChoice = 1;
+              } else if (widget.element == 'paper') {
+                playerChoice = 2;
+              } else if (widget.element == 'scissors') {
+                playerChoice = 3;
+              }
+
+              setState(() {
+                isSelected = true;
+              });
+            }
+          : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
