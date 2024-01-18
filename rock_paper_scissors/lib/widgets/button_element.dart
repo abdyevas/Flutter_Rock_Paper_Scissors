@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'package:rock_paper_scissors/styling/styled_button.dart';
 
 class ButtonElement extends StatefulWidget {
@@ -16,21 +15,20 @@ class ButtonElement extends StatefulWidget {
 class _ButtonElementState extends State<ButtonElement> {
   
   bool isSelected = false;
-          
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: isSelected ? MyStyledButton.selected() : MyStyledButton.normal(),
       onPressed: widget.element != null
           ? () {
-              int randomChoice = Random().nextInt(3) + 1;
-              int playerChoice = 0;
+              String opponentChoice = '';
               if (widget.element == 'rock') {
-                playerChoice = 1;
+                opponentChoice = 'paper';
               } else if (widget.element == 'paper') {
-                playerChoice = 2;
+                opponentChoice = 'scissors';
               } else if (widget.element == 'scissors') {
-                playerChoice = 3;
+                opponentChoice = 'rock';
               }
 
               setState(() {
