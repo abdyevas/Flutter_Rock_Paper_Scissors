@@ -12,6 +12,7 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreen extends State<GameScreen> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,11 +40,14 @@ class _GameScreen extends State<GameScreen> {
                         ButtonElement(element: null),
                       ],
                     ),
-                    Image.asset(
-                      'assets/images/paper_rock.png',
-                      width: 400,
-                      height: 400,
-                      fit: BoxFit.cover,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 30),
+                      child: Image.asset(
+                        'assets/images/scissors_paper.png',
+                        width: 350,
+                        height: 350,
+                        fit: BoxFit.cover,
+                      ),
                     ),
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +59,7 @@ class _GameScreen extends State<GameScreen> {
                         ButtonElement(element: 'scissors'),
                       ],
                     ),
-                    SizedBox(height: 80),
+                    const SizedBox(height: 80),
                   ],
                 ),
               ),

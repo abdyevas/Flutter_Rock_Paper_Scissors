@@ -1,12 +1,23 @@
 import 'package:flutter/material.dart';
 
 class MyStyledButton {
-  static ButtonStyle filledTonal() {
+  static ButtonStyle normal() {
     return ElevatedButton.styleFrom(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
       ),
       side: const BorderSide(width: 3.0),
+    );
+  }
+
+  static ButtonStyle selected() {
+    return ElevatedButton.styleFrom(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(12.0),
+      ),
+      side: const BorderSide(width: 3.0),
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      backgroundColor: Colors.lightBlueAccent,
     );
   }
 
