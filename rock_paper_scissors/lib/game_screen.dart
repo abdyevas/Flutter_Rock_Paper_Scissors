@@ -12,6 +12,8 @@ class GameScreen extends StatefulWidget {
 }
 
 class _GameScreen extends State<GameScreen> {
+  String opponentChoice = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +44,11 @@ class _GameScreen extends State<GameScreen> {
                       ),
                     ),
                     Image.asset(
-                      'assets/images/scissors_paper.png',
+                      opponentChoice == 'rock'
+                          ? 'assets/images/rock_scissors.png'
+                          : opponentChoice == 'paper'
+                              ? 'assets/images/paper_rock.png'
+                              : 'assets/images/scissors_paper.png',
                       width: 300,
                       height: 300,
                       fit: BoxFit.cover,
