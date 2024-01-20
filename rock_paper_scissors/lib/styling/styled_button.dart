@@ -26,17 +26,17 @@ class MyStyledButton {
     );
   }
 
-  static Widget image(String? element) {
+  static Widget image(String? element, double height, double width) {
     return element != null
         ? Image.asset(
             'assets/images/$element.png',
-            width: 50,
-            height: 80,
+            width: width,
+            height: height,
             fit: BoxFit.cover,
           )
-        : const SizedBox(
-            width: 50,
-            height: 80,
+        : SizedBox(
+            width: width,
+            height: height,
           );
   }
 }

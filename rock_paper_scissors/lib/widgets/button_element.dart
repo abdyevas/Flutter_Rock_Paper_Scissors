@@ -41,7 +41,7 @@ class _ButtonElementState extends State<ButtonElement> {
         children: [
           Padding(
             padding: const EdgeInsets.all(5),
-            child: MyStyledButton.image(widget.element),
+            child: MyStyledButton.image(widget.element, 50, 80),
           ),
         ],
       ),
