@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rock_paper_scissors/styling/styled_button.dart';
 import 'package:rock_paper_scissors/styling/styled_text.dart';
 import 'package:rock_paper_scissors/widgets/button_element.dart';
 
@@ -43,6 +44,15 @@ class _GameScreen extends State<GameScreen> {
                         ],
                       ),
                     ),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(5),
+                          child: MyStyledButton.image('rock', 300, 300),
+                        ),
+                      ],
+                    ),
+                    // place assets there
                     Image.asset(
                       opponentChoice == 'rock'
                           ? 'assets/images/rock_scissors.png'
