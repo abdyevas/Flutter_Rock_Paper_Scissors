@@ -48,20 +48,18 @@ class _GameScreen extends State<GameScreen> {
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(5),
-                          child: MyStyledButton.image('rock', 300, 300),
+                          child: MyStyledButton.image(
+                              opponentChoice == 'rock'
+                                  ? 'assets/images/rock_scissors.png'
+                                  : opponentChoice == 'paper'
+                                      ? 'assets/images/paper_rock.png'
+                                      : opponentChoice == 'paper'
+                                          ? 'assets/images/scissors_paper.png'
+                                          : null,
+                              300,
+                              300),
                         ),
                       ],
-                    ),
-                    // place assets there
-                    Image.asset(
-                      opponentChoice == 'rock'
-                          ? 'assets/images/rock_scissors.png'
-                          : opponentChoice == 'paper'
-                              ? 'assets/images/paper_rock.png'
-                              : 'assets/images/scissors_paper.png',
-                      width: 300,
-                      height: 300,
-                      fit: BoxFit.cover,
                     ),
                     const Expanded(
                       child: Row(
