@@ -53,7 +53,7 @@ class _GameScreen extends State<GameScreen> {
                                   ? 'assets/images/rock_scissors.png'
                                   : opponentChoice == 'paper'
                                       ? 'assets/images/paper_rock.png'
-                                      : opponentChoice == 'paper'
+                                      : opponentChoice == 'scissors'
                                           ? 'assets/images/scissors_paper.png'
                                           : null,
                               300,
