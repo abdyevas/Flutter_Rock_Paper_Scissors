@@ -26,7 +26,7 @@ class MyStyledButton {
     );
   }
 
-  static Widget image(String? element, double height, double width) {
+  static Widget image(String? element, double width, double height) {
     return element != null
         ? Image.asset(
             'assets/images/$element.png',
