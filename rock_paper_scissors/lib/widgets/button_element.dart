@@ -33,6 +33,7 @@ class _ButtonElementState extends State<ButtonElement> {
 
               setState(() {
                 isSelected = true;
+                opponentChoice = opponentChoice;
               });
             }
           : null,
