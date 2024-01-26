@@ -14,6 +14,7 @@ class GameScreen extends StatefulWidget {
 
 class _GameScreen extends State<GameScreen> {
   String opponentChoice = '';
+  String userChoice = '';
 
   @override
   Widget build(BuildContext context) {
@@ -82,5 +83,19 @@ class _GameScreen extends State<GameScreen> {
         ],
       ),
     );
+  }
+
+  void updateOpponentCard(String userChoice) {
+    setState(() {
+      this.userChoice = userChoice;
+
+      if (userChoice == 'rock') {
+        opponentChoice = 'paper';
+      } else if (userChoice == 'paper') {
+        opponentChoice = 'scissors';
+      } else if (userChoice == 'scissors') {
+        opponentChoice = 'rock';
+      }
+    });
   }
 }
