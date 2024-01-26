@@ -13,7 +13,6 @@ class ButtonElement extends StatefulWidget {
 }
 
 class _ButtonElementState extends State<ButtonElement> {
-  
   bool isSelected = false;
 
   @override
@@ -22,18 +21,8 @@ class _ButtonElementState extends State<ButtonElement> {
       style: isSelected ? MyStyledButton.selected() : MyStyledButton.normal(),
       onPressed: widget.element != null
           ? () {
-              // String opponentChoice = '';
-              // if (widget.element == 'rock') {
-              //   opponentChoice = 'paper';
-              // } else if (widget.element == 'paper') {
-              //   opponentChoice = 'scissors';
-              // } else if (widget.element == 'scissors') {
-              //   opponentChoice = 'rock';
-              // }
-
               setState(() {
                 isSelected = true;
-                // opponentChoice = opponentChoice;
               });
             }
           : null,
