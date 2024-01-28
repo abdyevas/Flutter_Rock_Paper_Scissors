@@ -37,11 +37,18 @@ class _GameScreen extends State<GameScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ButtonElement(element: null),
+                          ButtonElement(
+                            element: null,
+                            onPressed: () => updateOpponentCard('rock'),
+                          ),
                           SizedBox(width: 15),
-                          ButtonElement(element: null),
+                          ButtonElement(
+                              element: null,
+                              onPressed: () => updateOpponentCard('paper')),
                           SizedBox(width: 15),
-                          ButtonElement(element: null),
+                          ButtonElement(
+                              element: null,
+                              onPressed: () => updateOpponentCard('scissors')),
                         ],
                       ),
                     ),

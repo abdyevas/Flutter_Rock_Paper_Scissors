@@ -5,7 +5,7 @@ class ButtonElement extends StatefulWidget {
   const ButtonElement({super.key, required this.element, required this.onPressed});
 
   final String? element;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
 
   @override
   State<StatefulWidget> createState() {
