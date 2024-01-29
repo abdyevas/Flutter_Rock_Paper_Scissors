@@ -33,7 +33,7 @@ class _GameScreen extends State<GameScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Expanded(
+                    Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -41,11 +41,11 @@ class _GameScreen extends State<GameScreen> {
                             element: null,
                             onPressed: () => updateOpponentCard('rock'),
                           ),
-                          SizedBox(width: 15),
+                          const SizedBox(width: 15),
                           ButtonElement(
                               element: null,
                               onPressed: () => updateOpponentCard('paper')),
-                          SizedBox(width: 15),
+                          const SizedBox(width: 15),
                           ButtonElement(
                               element: null,
                               onPressed: () => updateOpponentCard('scissors')),
@@ -73,11 +73,11 @@ class _GameScreen extends State<GameScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ButtonElement(element: 'rock'),
+                          ButtonElement(element: 'rock', onPressed: null),
                           SizedBox(width: 15),
-                          ButtonElement(element: 'paper'),
+                          ButtonElement(element: 'paper', onPressed: null),
                           SizedBox(width: 15),
-                          ButtonElement(element: 'scissors'),
+                          ButtonElement(element: 'scissors', onPressed: null),
                         ],
                       ),
                     ),
