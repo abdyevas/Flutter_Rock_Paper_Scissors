@@ -43,12 +43,14 @@ class _GameScreen extends State<GameScreen> {
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
-                              element: null,
-                              onPressed: () => updateOpponentCard('paper')),
+                            element: null,
+                            onPressed: () => updateOpponentCard('paper'),
+                          ),
                           const SizedBox(width: 15),
                           ButtonElement(
-                              element: null,
-                              onPressed: () => updateOpponentCard('scissors')),
+                            element: null,
+                            onPressed: () => updateOpponentCard('scissors'),
+                          ),
                         ],
                       ),
                     ),
@@ -98,6 +100,7 @@ class _GameScreen extends State<GameScreen> {
 
       if (userChoice == 'rock') {
         opponentChoice = 'paper';
+        ButtonElement(element: 'paper', onPressed: null);
       } else if (userChoice == 'paper') {
         opponentChoice = 'scissors';
       } else if (userChoice == 'scissors') {
