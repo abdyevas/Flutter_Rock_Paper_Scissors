@@ -100,13 +100,10 @@ class _GameScreen extends State<GameScreen> {
 
       if (userChoice == 'rock') {
         opponentChoice = 'paper';
-        ButtonElement(element: 'paper', onPressed: null);
       } else if (userChoice == 'paper') {
         opponentChoice = 'scissors';
-        ButtonElement(element: 'scissors', onPressed: null);
       } else if (userChoice == 'scissors') {
         opponentChoice = 'rock';
-        ButtonElement(element: 'rock', onPressed: null);
       }
     });
   }
