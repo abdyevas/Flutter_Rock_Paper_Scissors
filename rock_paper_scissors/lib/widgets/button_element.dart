@@ -2,10 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:rock_paper_scissors/styling/styled_button.dart';
 
 class ButtonElement extends StatefulWidget {
-  const ButtonElement({super.key, required this.element, required this.onPressed});
+  const ButtonElement({super.key, required this.element,});
 
   final String? element;
-  final VoidCallback? onPressed;
 
   @override
   State<StatefulWidget> createState() {

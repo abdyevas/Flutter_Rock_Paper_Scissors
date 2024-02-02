@@ -33,24 +33,15 @@ class _GameScreen extends State<GameScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
+                    const Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ButtonElement(
-                            element: null,
-                            onPressed: () => updateOpponentCard('rock'),
-                          ),
-                          const SizedBox(width: 15),
-                          ButtonElement(
-                            element: null,
-                            onPressed: () => updateOpponentCard('paper'),
-                          ),
-                          const SizedBox(width: 15),
-                          ButtonElement(
-                            element: null,
-                            onPressed: () => updateOpponentCard('scissors'),
-                          ),
+                          ButtonElement(element: null),
+                          SizedBox(width: 15),
+                          ButtonElement(element: null),
+                          SizedBox(width: 15),
+                          ButtonElement(element: null),
                         ],
                       ),
                     ),
@@ -75,11 +66,11 @@ class _GameScreen extends State<GameScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ButtonElement(element: 'rock', onPressed: null),
+                          ButtonElement(element: 'rock'),
                           SizedBox(width: 15),
-                          ButtonElement(element: 'paper', onPressed: null),
+                          ButtonElement(element: 'paper'),
                           SizedBox(width: 15),
-                          ButtonElement(element: 'scissors', onPressed: null),
+                          ButtonElement(element: 'scissors'),
                         ],
                       ),
                     ),
