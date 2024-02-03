@@ -33,15 +33,27 @@ class _GameScreen extends State<GameScreen> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Expanded(
+                    Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ButtonElement(element: null),
-                          SizedBox(width: 15),
-                          ButtonElement(element: null),
-                          SizedBox(width: 15),
-                          ButtonElement(element: null),
+                          ButtonElement(
+                            element:
+                                opponentChoice == '' ? null : opponentChoice,
+                            onPressed: opponentChoice == '' ? null : () {},
+                          ),
+                          const SizedBox(width: 15),
+                          ButtonElement(
+                            element:
+                                opponentChoice == '' ? null : opponentChoice,
+                            onPressed: opponentChoice == '' ? null : () {},
+                          ),
+                          const SizedBox(width: 15),
+                          ButtonElement(
+                            element:
+                                opponentChoice == '' ? null : opponentChoice,
+                            onPressed: opponentChoice == '' ? null : () {},
+                          ),
                         ],
                       ),
                     ),
@@ -62,15 +74,24 @@ class _GameScreen extends State<GameScreen> {
                         ),
                       ],
                     ),
-                    const Expanded(
+                    Expanded(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          ButtonElement(element: 'rock'),
-                          SizedBox(width: 15),
-                          ButtonElement(element: 'paper'),
-                          SizedBox(width: 15),
-                          ButtonElement(element: 'scissors'),
+                          ButtonElement(
+                            element: 'rock',
+                            onPressed: () => updateOpponentCard('rock'),
+                          ),
+                          const SizedBox(width: 15),
+                          ButtonElement(
+                            element: 'paper',
+                            onPressed: () => updateOpponentCard('paper'),
+                          ),
+                          const SizedBox(width: 15),
+                          ButtonElement(
+                            element: 'scissors',
+                            onPressed: () => updateOpponentCard('scissors'),
+                          ),
                         ],
                       ),
                     ),
@@ -86,9 +107,9 @@ class _GameScreen extends State<GameScreen> {
   }
 
   void updateOpponentCard(String userChoice) {
-    setState(() {
-      this.userChoice = userChoice;
+    this.userChoice = userChoice;
 
+    setState(() {
       if (userChoice == 'rock') {
         opponentChoice = 'paper';
       } else if (userChoice == 'paper') {
@@ -96,6 +117,8 @@ class _GameScreen extends State<GameScreen> {
       } else if (userChoice == 'scissors') {
         opponentChoice = 'rock';
       }
+
+      print('Opponent Choice: $opponentChoice');
     });
   }
 }
