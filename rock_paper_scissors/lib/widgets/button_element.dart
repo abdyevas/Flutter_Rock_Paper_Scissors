@@ -20,13 +20,14 @@ class _ButtonElementState extends State<ButtonElement> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: isSelected ? MyStyledButton.selected() : MyStyledButton.normal(),
-      onPressed: widget.element != null
-          ? () {
-              setState(() {
-                isSelected = !isSelected;
-              });
-            }
-          : null,
+      onPressed: widget.onPressed,
+      // widget.element != null
+      //     ? () {
+      //         setState(() {
+      //           isSelected = !isSelected;
+      //         });
+      //       }
+      //     : null,
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [

@@ -63,11 +63,11 @@ class _GameScreen extends State<GameScreen> {
                           padding: const EdgeInsets.all(5),
                           child: MyStyledButton.image(
                               opponentChoice == 'rock'
-                                  ? 'assets/images/rock_scissors.png'
+                                  ? 'rock_scissors'
                                   : opponentChoice == 'paper'
-                                      ? 'assets/images/paper_rock.png'
+                                      ? 'paper_rock'
                                       : opponentChoice == 'scissors'
-                                          ? 'assets/images/scissors_paper.png'
+                                          ? 'scissors_paper'
                                           : null,
                               300,
                               300),
@@ -80,17 +80,17 @@ class _GameScreen extends State<GameScreen> {
                         children: [
                           ButtonElement(
                             element: 'rock',
-                            onPressed: () => updateOpponentCard('rock'),
+                            onPressed: () { updateOpponentCard('rock');},
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: 'paper',
-                            onPressed: () => updateOpponentCard('paper'),
+                            onPressed: () { updateOpponentCard('paper');},
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: 'scissors',
-                            onPressed: () => updateOpponentCard('scissors'),
+                            onPressed: () { updateOpponentCard('scissors');},
                           ),
                         ],
                       ),
@@ -108,7 +108,6 @@ class _GameScreen extends State<GameScreen> {
 
   void updateOpponentCard(String userChoice) {
     this.userChoice = userChoice;
-
     setState(() {
       if (userChoice == 'rock') {
         opponentChoice = 'paper';
@@ -117,8 +116,6 @@ class _GameScreen extends State<GameScreen> {
       } else if (userChoice == 'scissors') {
         opponentChoice = 'rock';
       }
-
-      print('Opponent Choice: $opponentChoice');
     });
   }
 }
