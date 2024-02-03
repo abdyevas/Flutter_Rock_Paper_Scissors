@@ -69,9 +69,10 @@ class _GameScreen extends State<GameScreen> {
                       ),
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(5),
+                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
                           child: MyStyledButton.image(
                               opponentChoice == 'rock'
                                   ? 'rock_scissors'
