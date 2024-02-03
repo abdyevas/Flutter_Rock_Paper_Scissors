@@ -38,20 +38,31 @@ class _GameScreen extends State<GameScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ButtonElement(
-                            element:
-                                opponentChoice == '' ? null : opponentChoice,
+                            element: opponentChoice == ''
+                                ? null
+                                : userChoice == 'scissors'
+                                    ? opponentChoice
+                                    : null,
                             onPressed: opponentChoice == '' ? null : () {},
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element:
-                                opponentChoice == '' ? null : opponentChoice,
+                                opponentChoice == '' 
+                                ? null 
+                                : userChoice == 'rock'
+                                    ? opponentChoice
+                                    : null,
                             onPressed: opponentChoice == '' ? null : () {},
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element:
-                                opponentChoice == '' ? null : opponentChoice,
+                                opponentChoice == '' 
+                                ? null 
+                                : userChoice == 'paper'
+                                    ? opponentChoice
+                                    : null,
                             onPressed: opponentChoice == '' ? null : () {},
                           ),
                         ],
@@ -80,17 +91,23 @@ class _GameScreen extends State<GameScreen> {
                         children: [
                           ButtonElement(
                             element: 'rock',
-                            onPressed: () { updateOpponentCard('rock');},
+                            onPressed: () {
+                              updateOpponentCard('rock');
+                            },
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: 'paper',
-                            onPressed: () { updateOpponentCard('paper');},
+                            onPressed: () {
+                              updateOpponentCard('paper');
+                            },
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: 'scissors',
-                            onPressed: () { updateOpponentCard('scissors');},
+                            onPressed: () {
+                              updateOpponentCard('scissors');
+                            },
                           ),
                         ],
                       ),
