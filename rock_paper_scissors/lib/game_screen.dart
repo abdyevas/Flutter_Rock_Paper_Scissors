@@ -126,6 +126,7 @@ class _GameScreen extends State<GameScreen> {
 
   void updateOpponentCard(String userChoice) {
     this.userChoice = userChoice;
+    
     setState(() {
       if (userChoice == 'rock') {
         opponentChoice = 'paper';

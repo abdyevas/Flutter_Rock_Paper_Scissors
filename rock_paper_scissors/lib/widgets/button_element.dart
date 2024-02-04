@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:rock_paper_scissors/styling/styled_button.dart';
 
 class ButtonElement extends StatefulWidget {
-  const ButtonElement({super.key, required this.element, required this.onPressed});
+  const ButtonElement(
+      {super.key, required this.element, required this.onPressed});
 
   final String? element;
   final VoidCallback? onPressed;
@@ -20,14 +21,15 @@ class _ButtonElementState extends State<ButtonElement> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: isSelected ? MyStyledButton.selected() : MyStyledButton.normal(),
-      onPressed: widget.onPressed,
-      // widget.element != null
-      //     ? () {
-      //         setState(() {
-      //           isSelected = !isSelected;
-      //         });
-      //       }
-      //     : null,
+      onPressed: () {
+        if (widget.onPressed != null) {
+          widget.onPressed!();
+        }
+
+        setState(() {
+          isSelected = !isSelected;
+        });
+      },
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
