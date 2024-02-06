@@ -3,10 +3,11 @@ import 'package:rock_paper_scissors/styling/styled_button.dart';
 
 class ButtonElement extends StatefulWidget {
   const ButtonElement(
-      {super.key, required this.element, required this.onPressed});
+      {super.key, required this.element, required this.onPressed, required this.isSelected,});
 
   final String? element;
   final VoidCallback? onPressed;
+  final bool isSelected;
 
   @override
   State<StatefulWidget> createState() {
@@ -15,20 +16,14 @@ class ButtonElement extends StatefulWidget {
 }
 
 class _ButtonElementState extends State<ButtonElement> {
-  bool isSelected = false;
-
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      style: isSelected ? MyStyledButton.selected() : MyStyledButton.normal(),
+      style: widget.isSelected ? MyStyledButton.selected() : MyStyledButton.normal(),
       onPressed: () {
         if (widget.onPressed != null) {
           widget.onPressed!();
         }
-
-        setState(() {
-          isSelected = !isSelected;
-        });
       },
       child: Row(
         mainAxisSize: MainAxisSize.min,

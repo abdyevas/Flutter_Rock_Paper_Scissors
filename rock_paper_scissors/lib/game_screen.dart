@@ -15,6 +15,7 @@ class GameScreen extends StatefulWidget {
 class _GameScreen extends State<GameScreen> {
   String opponentChoice = '';
   String userChoice = '';
+  int selectedIndex = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -44,26 +45,27 @@ class _GameScreen extends State<GameScreen> {
                                     ? opponentChoice
                                     : null,
                             onPressed: opponentChoice == '' ? null : () {},
+                            isSelected: false,
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
-                            element:
-                                opponentChoice == '' 
-                                ? null 
+                            element: opponentChoice == ''
+                                ? null
                                 : userChoice == 'rock'
                                     ? opponentChoice
                                     : null,
                             onPressed: opponentChoice == '' ? null : () {},
+                            isSelected: false,
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
-                            element:
-                                opponentChoice == '' 
-                                ? null 
+                            element: opponentChoice == ''
+                                ? null
                                 : userChoice == 'paper'
                                     ? opponentChoice
                                     : null,
                             onPressed: opponentChoice == '' ? null : () {},
+                            isSelected: false,
                           ),
                         ],
                       ),
@@ -72,7 +74,8 @@ class _GameScreen extends State<GameScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 10),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 5, vertical: 10),
                           child: MyStyledButton.image(
                               opponentChoice == 'rock'
                                   ? 'rock_scissors'
@@ -93,22 +96,25 @@ class _GameScreen extends State<GameScreen> {
                           ButtonElement(
                             element: 'rock',
                             onPressed: () {
-                              updateOpponentCard('rock');
+                              updateOpponentCard('rock', 0);
                             },
+                            isSelected: selectedIndex == 0,
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: 'paper',
                             onPressed: () {
-                              updateOpponentCard('paper');
+                              updateOpponentCard('paper', 1);
                             },
+                            isSelected: selectedIndex == 1,
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: 'scissors',
                             onPressed: () {
-                              updateOpponentCard('scissors');
+                              updateOpponentCard('scissors', 2);
                             },
+                            isSelected: selectedIndex == 2,
                           ),
                         ],
                       ),
@@ -124,10 +130,11 @@ class _GameScreen extends State<GameScreen> {
     );
   }
 
-  void updateOpponentCard(String userChoice) {
-    this.userChoice = userChoice;
-    
+  void updateOpponentCard(String userChoice, int buttonIndex) {
     setState(() {
+      this.userChoice = userChoice;
+      selectedIndex = buttonIndex; 
+
       if (userChoice == 'rock') {
         opponentChoice = 'paper';
       } else if (userChoice == 'paper') {
