@@ -45,7 +45,9 @@ class _GameScreen extends State<GameScreen> {
                                     ? opponentChoice
                                     : null,
                             onPressed: opponentChoice == '' ? null : () {},
-                            isSelected: false,
+                            isSelected: userChoice == 'scissors'
+                                ? true
+                                : false,
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
@@ -55,7 +57,9 @@ class _GameScreen extends State<GameScreen> {
                                     ? opponentChoice
                                     : null,
                             onPressed: opponentChoice == '' ? null : () {},
-                            isSelected: false,
+                            isSelected: userChoice == 'rock'
+                                ? true
+                                : false,
                           ),
                           const SizedBox(width: 15),
                           ButtonElement(
@@ -65,7 +69,9 @@ class _GameScreen extends State<GameScreen> {
                                     ? opponentChoice
                                     : null,
                             onPressed: opponentChoice == '' ? null : () {},
-                            isSelected: false,
+                            isSelected: userChoice == 'paper'
+                                ? true
+                                : false,
                           ),
                         ],
                       ),
