@@ -49,6 +49,7 @@ class _GameScreen extends State<GameScreen> {
                                 ? true
                                 : false,
                           ),
+                          const Text('0'),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: opponentChoice == ''
@@ -62,6 +63,7 @@ class _GameScreen extends State<GameScreen> {
                                 : false,
                           ),
                           const SizedBox(width: 15),
+                          const Text('0'),
                           ButtonElement(
                             element: opponentChoice == ''
                                 ? null
@@ -148,6 +150,12 @@ class _GameScreen extends State<GameScreen> {
       } else if (userChoice == 'scissors') {
         opponentChoice = 'rock';
       }
+    });
+  }
+
+  void increaseScore() {
+    setState(() {
+      
     });
   }
 }
