@@ -16,8 +16,6 @@ class _GameScreen extends State<GameScreen> {
   String opponentChoice = '';
   String userChoice = '';
   int selectedIndex = -1;
-  int playerScore = 0;
-  int opponentScore = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +49,6 @@ class _GameScreen extends State<GameScreen> {
                                 ? true
                                 : false,
                           ),
-                          StyledText(text: '$playerScore'),
                           const SizedBox(width: 15),
                           ButtonElement(
                             element: opponentChoice == ''
@@ -65,7 +62,6 @@ class _GameScreen extends State<GameScreen> {
                                 : false,
                           ),
                           const SizedBox(width: 15),
-                          StyledText(text: '$opponentScore'),
                           ButtonElement(
                             element: opponentChoice == ''
                                 ? null
@@ -153,13 +149,5 @@ class _GameScreen extends State<GameScreen> {
         opponentChoice = 'rock';
       }
     });
-  }
-
-  void updateScore(String winner) {
-    if (winner == '0') {
-      playerScore ++;
-    } else if (winner == '1') {
-      opponentScore ++;
-    }
   }
 }
