@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rock_paper_scissors/game_screen.dart';
-import 'package:rock_paper_scissors/theme.dart';
+import 'package:rock_paper_scissors/widgets/game_screen.dart';
+import 'package:rock_paper_scissors/widgets/theme.dart';
 
 
 void main() {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:rock_paper_scissors/theme.dart';
+import 'package:rock_paper_scissors/widgets/theme.dart';
 
 class StyledText extends StatelessWidget {
   const StyledText({
